@@ -1,0 +1,682 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'acumin-pro', sans-serif; /* angiver standard fonten for hjemmesiden: Acumin Pro, Extra Light */
+    font-weight: 200; 
+    font-style: normal;
+    color: #1b1212; 
+    font-size: 100%;
+}
+
+/********************************************************************************************************************************/
+/************************************************* Styleregler for navigation  **************************************************/
+/********************************************************************************************************************************/
+
+nav {
+    background-color: #ffffff; /* navigationsbaren skal have en hvid baggrund, så man altid nemt kan læse menupunkterne */
+    padding: 20px;
+    position: sticky; /* navigationsbaren skal følge med siden ned */
+    top: 0;
+    z-index: 3; /* menupunkter samt undermenuer skal overlappe alt andet indhold på siden */
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table; /* menuen skal vises som en tabel */
+}
+
+/* angiver størrelsen på logoet og dets placeren til venstre i navigationsbaren */
+nav .logo img {
+    float: left;
+    width: auto;
+    height: 45px;
+    margin-left: 40px;
+}
+
+/* angiver at hovedmenupunkterne skal sidde til højre i navigationsbaren og at der skal være luft imellem hvert punkt */
+nav ul {
+    float: right;
+    list-style: none; /* da menuen er lavet som en list, fjerner dette punkttegnene */
+    line-height: 30px;
+    margin-right: 40px;
+    position: relative;
+}
+
+/* angiver at hovedmenupunkterne skal sætte sig til venstre og have hvid baggrund */
+nav ul li {
+    float: left;
+    background: #ffffff;
+    margin: 0 5px;
+}
+
+/* angiver stilen for til for hovedmenuens links */
+nav ul li a {
+    color:#1b1212;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 15px;
+}
+
+/* angiver at stregen under hovedmenuens links skal tage 0.3 sekunder om at vise sig helt, når musen hover hen over */
+nav ul li a:hover{
+    border-bottom: 1px solid #1b1212;
+    transition: all 0.3s linear;
+}
+
+/* angiver, hvordan dropdownmenuen skal placere sig ift. den tilhørende hovedmenupunkt */
+nav ul ul {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+/* angiver at dropdownmenuerne skal tage 0.3 sekunder om at folde sig ud, når musen hover hen over på bred skærm */
+nav ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s linear;
+}
+
+/* angiver opsætning for dropdown-menuens links og hvordan de skal placere sig ift. hinanden */
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+}
+
+/* angiver stilen for dropdown-menuens linktekst */
+nav ul ul li a {
+    line-height: 60px;
+    font-size: 15px;
+}
+
+/* angiver størrelsen, margin og farver for pilen i dropdown-menuen */
+.fa-angle-down {
+    margin-left: 10px;
+    font-size: 10px;
+    color: #1b1212;
+}
+
+/* sørger for at burgermenu-ikonet, inputfelterne samt elementer med class="show" ikke vises, når skærmen er bred */
+.show, .icon, input {
+    display: none;
+}
+
+
+/******************************************************************************************************************************/
+/************************************************* Styleregler for main  ******************************************************/
+/******************************************************************************************************************************/
+
+/************** Styleregler for hero billeder ****************/
+
+.hero {
+    position: relative; /* sørger for at titlen kan placeres ovenpå billedet */
+    display: flex; /* sørger for at billedteksten kan placeres som ønsket */
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; /* sørger for at alle elementer i tagget med class="hero" placerer sig i en kolonne */
+    text-align: center; /* teksten skal være centreret */
+}
+
+.hero img {
+    width: 100%; /* hero på hver side skal fylde hele skærmens bredde */
+    height: auto;
+    opacity: 50%; /* sørger for at tekst ovenpå billederne kan læses */
+}
+
+/* særlig styleregler for hero på forsiden */
+.forside_hero {
+    display: flex; 
+    flex-direction: column; /* når skærmen er lille, skal de to heros placere sig under hinanden */
+    margin: 0%;
+    width: 100%;
+}
+
+.forside_hero img {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper img {
+    width: 47%; /* de to billeder, som sidder ved siden af hinanden på forsiden, må kun optage 47% af bredden hver */
+    height: auto; /* sørger for at højden passer til bredden */
+}
+
+
+/* CSS for text-tags */
+h1 {
+    position: absolute; 
+    font-family: 'roboto-mono', monospace;
+    font-weight: 300;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Sørger for at overskriften sidder i midten af billedet både vandret og lodret */
+    font-size: 1.5em; /* angiver at skriften på små skærme skal være 1,5 gange større end 16px - 24px */
+    width: 80%; 
+}
+
+h2 {
+    font-family: 'roboto-mono', monospace;
+    font-weight: 300; /* angiver at alle h2 skal være skrevet med Roboto Mono Light */
+    font-size: 1.1250em; 
+    color:#f04923; 
+}
+
+h3 {
+    font-weight: 500; /* angiver at alle h3 skal være skrevet med Acumin Pro Medium */
+    font-size: 0.75em;
+}
+
+p {
+    font-size: 0.75em;
+    line-height: 1.8em;
+    margin: 6% 0 6% 0;
+}
+
+.italic {
+    font-style: italic; /* bruges til at ændre tekstykker med denne class til kursiv */
+}
+
+.bold {
+    font-weight: 500;
+}
+
+#orange_text {
+    color: #f04923;
+    top: 40%; /* angiver placeringen af titlen på forsiden */
+    font-size: 3em;
+}
+
+#slogan {
+    color: #f04923;
+    position: absolute; /* angiver at tekstens placering altid skal være den samme */
+    top: 53%; /* angiver placering af titlen  */
+}
+
+#position_absolut {
+    position: absolute; 
+    top: 60%;
+}
+
+#no_line {
+    text-decoration: none; /* fjerner streg under links med dette id */
+}
+
+a, a button {
+    color:#1b1212;
+}
+
+a:hover, a button:hover {
+    color: #1b1212;
+}
+
+a:active, a button:active {
+    color: #1b1212;
+}
+
+/************** CSS for containers ***************/
+
+.creme-farvet, .engage {
+    border-bottom: 1px solid #f04923;
+    padding: 6%; /* der skal være luft mellem kassens indhold og kassen kant */
+    display: flex;
+    background-color: #F3EDE9;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column; /* indholdet skal sidde i en kolonne på en smmal skærm */
+}
+
+.engage {
+    border-top: 1px solid #f04923;
+    border-bottom: none;
+    background-color: #ffffff;
+}
+
+.ikoner_container {
+    border-bottom: 1px solid #f04923; /* kassen skal afsluttes med en tynd kant/streg */
+    padding: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* sørger for at de to kasser med ikoner sidder ovenpå hinanden, når skærmen er smal */
+}
+
+.ikoner {
+    display: flex;
+    justify-content: space-between; /* sørger for at ikonerne udfylder kassens bredde, men har luft imellem sig */
+    flex-direction: row; /* sørger for at ikonerne i denne kasse sidder ved siden af hinanden */
+    margin-top: 6%;
+    width: 100%; 
+}
+
+.ikoner_items {
+    display: flex;
+    flex-direction: column; /* ikonernes tilhørende tekst skal sidde under dem */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 10% 0 10%;
+}
+
+.container {
+    display: flex; 
+    flex-direction: column;
+    border-bottom: 1px solid #f04923;
+    margin: 6%;
+    padding-bottom: 6%; /* sørger for luft inden afsluttende kant */
+}
+
+.container .øl_fakta {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* sørger for luft mellem de to billeder i kassen */
+    width: 100%; 
+}
+
+.container_maps {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #f04923;
+    margin: 6%;
+}
+
+/* angiver størrelsen på google maps kortene */
+iframe {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 6%;
+}
+
+.instagram_tiles {
+    display: flex;
+    justify-content: space-evenly;
+    width: 95%;
+    padding: 6% 0 0 0;
+}
+
+/*************** CSS for img-tags ***************/ 
+
+.creme-farvet img {
+    margin-bottom: 6%;
+    max-width: 100%; /* sørger for, at billedet med bryggerne ikke er breddere end containeren */
+    height: auto; /* sørger for, at billedet bevarer sin proportionale højde */
+}
+
+.ikoner_items img {
+    height: auto;
+    width: 86px; 
+    margin-bottom: 10%;
+}
+
+.instagram_tiles img {
+    width: 105px; 
+    height: auto;
+}
+
+/*************** CSS for særlige style ***************/     
+
+#no_border_bottom, #special {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.container img, #padding_bottom {
+    padding: 0 0 6% 0;
+}
+
+.no_padding_bottom {
+    padding: 6% 6% 0 6%;
+}
+
+/*************** CSS for input-felter ***************/     
+
+form {
+    font-family: 'acumin-pro', sans-serif;
+    font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* sørger for at placere tekst og pil i hver sin ende af feltet */
+    border: 1px solid #000; /* tilføjer en kant hele vejen rundt om input-feltet */
+    width: 330px; 
+    height: auto;
+    padding: 10px; /* sørger for at der er luft mellem tekst og kanten */
+}
+
+form input {
+    display: block; /* sørger for at input-feltet kan benyttes, selvom det er sat til "display: none" i css for navigationen */
+    border: none;
+}
+
+form button {
+    border: none; /* kanten rundt om selve taste-feltet skal ikke vises */
+    width: 40px; 
+    height: auto;
+}
+
+/************** CSS for knapper ***************/
+
+button {
+    width: 120px; 
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #93D1D0;
+    user-select: none;
+    font-size: 0.75em;
+    transition: all 0.5s linear; /* tilføjer en transition til knappen, som varer i 0.5 sekunder */
+    font-family: 'acumin-pro', sans-serif;
+    font-weight: 200;
+}
+
+button a {
+    text-decoration: none;
+    color: #1b1212;
+}
+
+button:hover, #shop_btn:hover {
+    border-radius: 0;
+    transform: scale(1.1); /* når man hover hen over knapperne, skal de skaleres op med 1.1 */
+}
+
+/********************************************************************************************************************************/
+/************************************************* Styleregler for footer  ******************************************************/
+/********************************************************************************************************************************/
+
+
+footer {
+    padding: 6% 6% 6% 6%;
+    background-color: #F3EDE9;
+    display: flex; /* Bruger flexbox */
+    justify-content: space-between; /* Placerer elementerne med lige mellemrum */
+    flex-direction: column;
+}
+
+.footer_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.mærkater {
+    display: flex;
+    align-items: center; /* Centrerer øko-mærkater og sociale medier vertikalt */
+}
+
+.mærkater img {
+    height: 40px;
+    width: auto;
+    padding: 5px;
+}
+
+.mærkater i {
+    padding: 5px;
+    transition: all 0.5s linear; /* tilføjer en transition, som varer i 0.5 sekunder til ikonerne for sociale medier */
+}
+
+.mærkater i:hover {
+    border-radius: 0;
+    transform: scale(1.1); /* når man hover hen over ikonerne for sociale medier, skal de skaleres op med 1.1 */
+}
+
+.align {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+
+/********************************************************************************************************************************/
+/******************************************************** Media Queries *********************************************************/
+/********************************************************************************************************************************/
+
+/************************** Media Query til navigationsbar ***************************/
+
+@media all and (max-width: 968px) {
+    
+    nav ul {
+        margin-right: 0px;
+        float: none;
+        text-align: center; /* sørger for at menupunkterne er centreret, når burger menuen foldes ud */
+    }
+
+    nav ul li, nav ul ul li {
+        display: block; /* sørger for at alle hovedmenuer og undermenuer vises som en blok */
+        width: 100%;
+    }
+
+    nav ul li a, nav ul ul li a {
+        font-size: 1.2em;
+        line-height: 60px;
+    }
+
+    nav ul ul {
+        position: static; /* undermenuerne skal følge sidens normale flow */
+        border-top: none;
+        float: none; 
+        display: none;  
+        opacity: 1;
+        visibility: visible;
+    } 
+
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+
+    .show {
+        display: block;
+        line-height: 60px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    /* angiver styling af alle links, som er børn til elementer med class="show" */
+    .show a {
+        color: #1b1212;
+        font-family: 'acumin pro', sans-serif;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    nav .logo img {
+        margin-left: 6px;
+    }
+
+    .icon {
+        display: block; /* sørger for at burgermenu-ikonet, når skærmen bliver smallere end 968px */
+        color: #1b1212;
+        position: absolute;
+        right: 26px; /* sørger for at der er den samme luft fra burger-ikonet til højre kant, som der er fra logo til venstre kant burgermenu-ikonet, når skærmen bliver smallere end 968px */
+        font-size: 30px;
+    }
+
+    /* sørger for at alle links, som kommer direkte efter elementer med class="show" samt ul-elementer ikke som udgangspunkt bliver vist */
+    .show + a, ul {
+        display: none; 
+    }
+
+    /* Sørger for, at dropdown-menuen åbner sig/bliver vist som en blok, når checkboxen bliver krydset af ved at man trykker på hovedmenupunktet */
+
+    [id^=btn]:checked + ul { 
+        display: block;
+    }
+}
+
+
+/************************** Media Query til text-tags ***************************/
+
+@media only screen and (min-width: 768px) {
+
+    .forside_hero {
+        flex-direction: row; /* når skærmen er bred, skal de to heros placere sig ved siden af hinanden */
+    }
+
+    h1 {
+        font-size: 3.125em; /* angiver at skriften på brede skærme skal være 3.125 gange større end 16px */
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3, p {
+        font-size: 1.2em;
+    }
+
+    #orange_text {
+        font-size: 5em;
+    }
+
+    #position_absolut {
+        top: 65%; /* tilpasser placeringen af knappen på forsiden, så det også ser godt ud på en bred skærm */
+    }
+
+    #large_text {
+        font-size: 2em;
+        padding-bottom: 0;
+        margin-bottom: 6%;
+        margin-top: 0;
+    }
+
+    .container_text {
+        width: 45%; /* Justerer bredden af teksten */
+    }
+
+    .creme-farvet p, .engage p {
+        width: 70%;
+    }
+
+    #direction_row p {
+        width: 100%;
+    }
+
+    /************************** Media Query til containers ***************************/
+
+    .container_maps p, .engage p {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .instagram_tiles, .btn_container {
+        max-width: 53%; /* sørger for instagram billederne bliver ved med at sidde tæt sammen, når skærmen bliver bred */
+    }
+
+    .creme-farvet {
+        justify-content: space-between; /* sørger for at input-feltet kan benyttes, selvom det er sat til "display: none" i css for navigationen */
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row; /* sørger for at alle ikonerne på siden "vores bryg" sidder ved siden af hinanden */
+    }
+
+    .wrapper {
+        width: 55%;
+    }
+
+    #direction_row {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /************************** Media Query til knapper og input-felter ***************************/
+
+    button {
+        width: 180px; /* på en bred skærm skal knapperne være lidt breddere og lidt højere */
+        height: 60px;
+        font-size: 1.2em;
+    }
+
+    form {
+        font-size: 1.2em;
+        width: 360px;
+    }
+    /************************** Media Query til for særlige styleregler ***************************/
+
+    #width_45 {
+        width: 45%;
+        margin: 3% 0 0 0; 
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row; /* sørger for at alle ikonerne på siden "vores bryg" sidder ved siden af hinanden */
+    }
+
+    #row_reverse, #special {
+        flex-direction: row-reverse; /* sørger for at alle elementerne i kassen placerer sig ved siden af hinanden, men i modsatte orden */
+    }
+
+    #special {
+        margin: 0 6% 6% 6%; 
+    }
+
+    #row_reverse .container_text, #direction_row img {
+        margin-right: 6%;
+    }
+
+    /************************** Media Query til img-tags ***************************/
+
+    .container img {
+        width: 50%; /* justerer bredden af billedet, så der er plads til tekst ved siden af */
+        margin-right: 6%;
+        padding: 0%;
+    }
+
+    .wrapper img {
+        margin: 5px;
+    }
+
+    .instagram_tiles img {
+        width: 210px;
+    }
+
+    #special img {
+        margin: 0 0 0 6%;
+    }
+
+    .ikoner_items img {
+        width: 150px; 
+    }
+
+    #row_reverse img {
+        margin-right: 0%;
+    }
+
+    #direction_row img {
+        width: 55%;
+    }
+
+    /************************** Media Query til footer ***************************/
+    
+    .footer {
+        flex-direction: column;
+        align-items: center; /* centrerer elementerne vertikalt */
+    }
+
+    .footer_container {
+        flex-direction: row; /* placerer elementerne ved siden af hinanden */
+        justify-content: space-between;  
+    }
+}
