@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="da"> <!-- sørger for at eventuelle class og id med dansk navne kan læses korrekt -->
+    <head>
+        <title>404 Error: Page not found</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Denne side er desværre ikke helt klar til at se dagens lys endnu, men den er under udvikling">
+
+        <!-- Links til stylesheets (reset + styleregler for body på alle sider) -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Links til Font Awesome ikoner -->
+        <script src="https://kit.fontawesome.com/08fa4f7fbc.js" crossorigin="anonymous"></script>
+        
+        <!-- Links til Adobe fonte -->
+        <link rel="stylesheet" href="https://use.typekit.net/kwi0zpa.css">
+    </head>
+
+    <!-- Start på body med alt synligt indhold på siden -->
+    <body>
+        <!-- Start på html for navigationsbaren -->
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_web.png" alt="trøjborgbryg logo"></a>
+            </div>
+            <label for="btn" class="icon">
+                <span class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li><a href="vores-bryg.html">Vores bryg</a></li>
+                <li><a href="vores-forhandlere.html">Vores forhandlere</a></li>
+                <li>
+                    <label for="btn-1" class="show">Vores forslag<span><i class="fa fa-angle-down"></i></span></label>
+                    <a href="side-u-u.html">Vores forslag
+                        <span><i class="fa fa-angle-down"></i></span>
+                    </a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="side-u-u.html">Måltidsmatch</a></li>
+                        <li><a href="side-u-u.html">Mocktails med øl</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="btn-2" class="show">Om os<span><i class="fa fa-angle-down"></i></span></label>
+                    <a href="hvem-er-vi.html">Om os
+                        <span><i class="fa fa-angle-down"></i></span>   
+                    </a>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                        <li><a href="hvem-er-vi.html">Hvem er vi</a></li>
+                        <li><a href="side-u-u.html">Sådan brygger vi</a></li>
+                        <li><a href="side-u-u.html">Kontakt os</a></li>
+                    </ul>
+                </li>
+                <li><a href="side-u-u.html" target="blank">SHOP</a></li>
+            </ul>
+        </nav>
+        <!-- Slut på html for navigationsbar -->
+
+        <!-- Start på hero -->
+        <section class="hero">
+            <img src="images/side-u-u.png" alt="Billede af hvedestår på en mark">
+                    
+            <h1>Hov! Vi brygger stadig på denne side</h1>
+            <h2 id="slogan">men vi lover, at den er lige på trapperne</h2>
+        </section>
+        <!-- Slut på hero -->
+
+        <!-- Start på footer -->
+        <footer>
+            <h3><a href="side-u-u.html" id="no_line">TRØJBORGBRYG</a></h3>
+            <div class="footer_container">
+                <p>Otte Ruds Gade 23B, Trøjborg<br>8200 Aarhus N, Danmark</p>
+                <p>+45 29116700<br>kontakt@trojborgbryg.dk</p>
+                <div class="align">
+                    <div class="mærkater">
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    </div>
+                    <div class="mærkater">
+                        <img src="images/eu-maerke.jpg" alt="EU's mærke for økologi">
+                        <img src="images/svanemaerket.png" alt="Svanemærket">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Slut på footer -->
+    </body>
+    <!-- Slut på body med alt synligt indhold på siden -->
+</html>

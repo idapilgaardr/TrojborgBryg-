@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="da"> <!-- sørger for at eventuelle class og id med dansk navne kan læses korrekt -->
+    <head>
+        <title>Trøjborgbryg: Vores bryg</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="På denne side kan du læse om, hvad der kendetegner vores bryg, og se vores udvalg af smagsvarianter og øltyper">
+
+        <!-- Links til stylesheets (reset + styleregler for body på alle sider) -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Links til Font Awesome ikoner -->
+        <script src="https://kit.fontawesome.com/08fa4f7fbc.js" crossorigin="anonymous"></script>
+        
+        <!-- Links til Adobe fonte -->
+        <link rel="stylesheet" href="https://use.typekit.net/kwi0zpa.css">
+    </head>
+
+    <!-- Start på body med alt synligt indhold på siden -->
+    <body>
+        <!-- Start på html for navigationsbaren -->
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_web.png" alt="trøjborgbryg logo"></a>
+            </div>
+            <label for="btn" class="icon">
+                <span class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li><a href="vores-bryg.html">Vores bryg</a></li>
+                <li><a href="vores-forhandlere.html">Vores forhandlere</a></li>
+                <li>
+                    <label for="btn-1" class="show">Vores forslag<span><i class="fa fa-angle-down"></i></span></label>
+                    <a href="side-u-u.html">Vores forslag
+                        <span><i class="fa fa-angle-down"></i></span>
+                    </a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="side-u-u.html">Måltidsmatch</a></li>
+                        <li><a href="side-u-u.html">Mocktails med øl</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="btn-2" class="show">Om os<span><i class="fa fa-angle-down"></i></span></label>
+                    <a href="hvem-er-vi.html">Om os
+                        <span><i class="fa fa-angle-down"></i></span>   
+                    </a>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                        <li><a href="hvem-er-vi.html">Hvem er vi</a></li>
+                        <li><a href="side-u-u.html">Sådan brygger vi</a></li>
+                        <li><a href="side-u-u.html">Kontakt os</a></li>
+                    </ul>
+                </li>
+                <li><a href="side-u-u.html" target="blank">SHOP</a></li>
+            </ul>
+        </nav>
+        <!-- Slut på html for navigationsbar -->
+
+
+        <!-- Start på html for hero + tilhørende titel -->
+        <section class="hero">
+            <img src="images/vores-bryg-hero.png" alt="Billede af øl-flasker fra TrøjborgBrygs bryggeri">
+            <h1>Vores bryg</h1>
+        </section>
+        <!-- Slut på html for hero + tilhørende titel -->
+
+        <!-- Start på html for main -->
+        <main>
+             <!-- Start på sektion med intro til bryg -->  
+            <div class="creme-farvet">
+                    <p id="large_text">I foråret 2023 bryggede vi vores første øl med visionen om, at alkoholfri bryg skal være en fryd for ganen og et bevidst valg - ikke et kompromis. Vores portefølje har vokseværk, og vi stræber fortsat efter at levere på sundheden og smagen.</p>
+
+                    <a href="side-u-u.html" id="shop_btn"><button>SHOP</button></a>
+            </div>
+            <!-- Slut på sektion med intro til bryg -->  
+
+            <!-- Start på sektion med kendetegn for Trøjborgbryg -->  
+            <section class="ikoner_container">
+                <div>
+                    <h2>Vores øl er brygget</h2>
+                </div>
+
+                <div class="flex-row">
+                    <div class="ikoner">
+                        <div class="ikoner_items">
+                            <img src="images/ikon_sund.png" alt="Firkantet og simpelt ikon af hjerte med står i">
+                            <p>med miljøet og din velvære i fokus</p>
+                        </div>
+
+                        <div class="ikoner_items">
+                            <img src="images/ikon_nyd.png" alt="Firkantet og simpelt ikon af glas med strå i">
+                            <p>med omhu, skabt til nydelse</p>
+                        </div>
+                    </div>
+
+                    <div class="ikoner">
+                        <div class="ikoner_items">
+                            <img src="images/ikon_lokal.png" alt="Firkantet og simpelt ikon af pin med står i">
+                            <p>lokalt og småt, i hjertet af Aarhus</p>
+                        </div>
+
+                        <div class="ikoner_items">
+                            <img src="images/ikon_0.5.png" alt="Firkantet og simpelt ikon med teksten 0.5%">
+                            <p>for den ægte, autentiske smag</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Slut på sektion med kendetegn for Trøjborgbryg -->  
+
+            <!-- Start på html for første øl -->  
+            <section class="container">
+                <img src="images/blaa-december.png" alt="Billede øllen Blå December på dåse og på flaske">
+            
+                <div class="container_text">
+                    <h2>Blå December Juleporter</h2>
+                    
+                    <p>Årets julebryg er en let drikkelig karamelliseret porter med brændte maltnoter. Sødet med dadelsirup og piftet op med et shot ingefær, frembringer Blå December krydrede smagsnoter med en langvarig eftersmag uden at efterlade en tung fornemmelse i kroppen.</p>
+                    
+                    <p class="italic">Find inspiration til <a href="side-u-u.html">servering af Blå December</a></p>
+
+                    <div class="øl_fakta">
+                        <h3>500 ml</h3>
+                        <h3>Vol 0.5%</h3>
+                        <h3>125 kcal i alt</h3>
+                    </div>
+                </div>
+            </section>
+            <!-- Slut på html for første øl -->
+
+            <!-- Start på html for anden øl --> 
+            <section class="container" id="row_reverse">
+                <img src="images/citrusbrise.png" alt="Billede af øllen Citrusbrise på dåse og på flaske">
+                
+                <div class="container_text">
+                    <h2>Citrusbrise Pale Ale (GF)</h2>
+                    
+                    <p>Nyd sommersmagen året rundt med Citrusbrise. Vores gyldne Pale Ale er fri for både alkohol og gluten, men beriget med et syrligt twist fra frisk citronskal og limesaft til at afrunde den lette maltsødme.</p>
+                    
+                    <p class="italic">Find inspiration til <a href="side-u-u.html">servering af Citrusbrise</a></p>
+
+                    <div class="øl_fakta">
+                        <h3>500 ml</h3>
+                        <h3>Vol 0.5%</h3>
+                        <h3>69 kcal i alt</h3>
+                    </div>
+                </div>
+            </section>
+            <!-- Slut på html for anden øl --> 
+
+            <!-- Start på html for tredje øl --> 
+            <section class="container" id="no_border_bottom">
+                <img src="images/signatur.png" alt="Billede af øllen TBB Signatur på dåse og på flaske">
+                
+                <div class="container_text">
+                    <h2>TBB Signatur IPA</h2>
+                    
+                    <p>TBB Signatur er vores stolte pionér. En unik IPA sammensat af en rig maltprofil og bitter appelsin, der tilsammen skaber en frisk, men velkendt ølsmag - en ægte signatur af vores dedikation til kvalitet og smagsfuld alkoholfri brygning.</p>
+                    
+                    <p class="italic">Find inspiration til <a href="side-u-u.html">servering af TBB Signatur</a></p>
+
+                    <div class="øl_fakta">
+                        <h3>500 ml</h3>
+                        <h3>Vol 0.5%</h3>
+                        <h3>105 kcal i alt</h3>
+                    </div>
+                </div>
+            </section>
+            <!-- Slut på html for tredje øl --> 
+        
+            <!-- Start på sektion med instagram -->
+            <section class="engage">
+                <h2>Gå ikke glip af nye bryg<br>- følg med på vores instagram</h2>
+
+                <div class="instagram_tiles">
+                    <a href="https://www.instagram.com" target="_blank"><img src="images/insta_flaske.png" alt="billede af trøjborgbryg ølflaske"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="images/insta_skaal.png" alt="billede af to brune ølflasker"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="images/insta_drink.png" alt="billede af øl i cocktailglas"></a>
+                </div>
+            </section>
+            <!-- Slut på sektion med instagram-->
+        </main>
+        <!-- Slut på html for main -->
+
+        <!-- Start på footer -->
+        <footer>
+            <h3><a href="vores-bryg.html" id="no_line">TRØJBORGBRYG</a></h3>
+            <div class="footer_container">
+                <p>Otte Ruds Gade 23B, Trøjborg<br>8200 Aarhus N, Danmark</p>
+                <p>+45 29116700<br>kontakt@trojborgbryg.dk</p>
+                <div class="align">
+                    <div class="mærkater">
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    </div>
+                    <div class="mærkater">
+                        <img src="images/eu-maerke.jpg" alt="EU's mærke for økologi">
+                        <img src="images/svanemaerket.png" alt="Svanemærket">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Slut på footer -->
+    </body>
+    <!-- Slut på body med alt synligt indhold på siden -->
+</html>

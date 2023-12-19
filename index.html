@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="da"> <!-- sørger for at eventuelle class og id med dansk navne kan læses korrekt -->
+    <head>
+        <title>Trøjborgbryg: Forside</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Dette er forsiden til Trøjborgbryg, hvor du får et hurtigt overblik over, hvad vi har at tilbyde som bryggeri samt tilmelde dig vores nyhedsbrev">
+
+         <!-- Links til stylesheets (reset + styleregler for body på alle sider) -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Links til Font Awesome ikoner -->
+        <script src="https://kit.fontawesome.com/08fa4f7fbc.js" crossorigin="anonymous"></script>
+        
+        <!-- Links til Adobe fonte -->
+        <link rel="stylesheet" href="https://use.typekit.net/kwi0zpa.css">
+    </head>
+
+    <!-- Start på body med alt synligt indhold på siden -->
+    <body>
+        <!-- Start på html for navigationsbaren -->
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_web.png" alt="trøjborgbryg logo"></a>
+            </div>
+            <label for="btn" class="icon"> 
+                <span class="fa fa-bars"></span> <!-- her skal der sidde et burgermenu-ikon -->
+            </label>
+            <input type="checkbox" id="btn">
+            <ul> <!-- menuen bliver lavet som en liste med listeelementer -->
+                <li><a href="vores-bryg.html">Vores bryg</a></li>
+                <li><a href="vores-forhandlere.html">Vores forhandlere</a></li>
+                <li>
+                    <label for="btn-1" class="show">Vores forslag<span><i class="fa fa-angle-down"></i></span></label>
+                    <a href="side-u-u.html">Vores forslag
+                        <span><i class="fa fa-angle-down"></i></span>
+                    </a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="side-u-u.html">Måltidsmatch</a></li>
+                        <li><a href="side-u-u.html">Mocktails med øl</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="btn-2" class="show">Om os<span><i class="fa fa-angle-down"></i></span></label>
+                    <a href="hvem-er-vi.html">Om os
+                        <span><i class="fa fa-angle-down"></i></span>   
+                    </a>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                        <li><a href="hvem-er-vi.html">Hvem er vi</a></li>
+                        <li><a href="side-u-u.html">Sådan brygger vi</a></li>
+                        <li><a href="side-u-u.html">Kontakt os</a></li>
+                    </ul>
+                </li>
+                <li><a href="side-u-u.html" target="blank">SHOP</a></li>
+            </ul>
+        </nav>
+        <!-- Slut på html for navigationsbar -->
+
+        <!-- Start på html for hero + tilhørende titel -->
+        <section class="hero">
+            <div class="forside_hero">
+                <img src="images/forside_havre.png" alt="Billede af hvedestrå på en mark">
+                <img src="images/forside_cykel.png" alt="Billede af cyklist med TrøjborgBryg i hånden">
+            </div>
+            
+            <h1 id="orange_text">ÆGTE <span class="bold">SMAG,</span>ÆGTE <span class="bold">SUNDHED</span></h1>
+            <h2 id="slogan">- mere end et kompromis -</h2>
+            <a href="vores-bryg.html" id="position_absolut"><button>SE UDVALG</button></a>
+        </section>
+        <!-- SLut på html for hero + tilhørende titel -->
+
+        <!-- Start på main -->
+        <main>
+            <!-- Start på html for sektion "nydes hvornår du vil" -->  
+            <section class="container">
+                <img src="images/koleskab.png" alt="Billede af TrøjborgBryg øl i et køleskab">
+            
+                <div class="container_text">
+                    <h2>Nydes hvornår du ønsker</h2>
+                    
+                    <p>Med kun 0,5% alkohol er vores øl skabt og brygget med en balance mellem smag og sundhed, så de kan nydes når som helst på dagen, ugen og året - uden at du skal gå på kompromis med dit velvære.</p>
+                </div>
+            </section>
+            <!-- Slut på sektion -->
+
+            <!-- Start på html for sektion "nydes hvordan du vil" -->  
+            <section class="container" id="row_reverse">
+                <div class="wrapper"> <!-- sørger for at de to billeder bliver opfattet som ét samlet element i containeren -->
+                    <img src="images/tapas.png" alt="Billede af cocktail med øl, lime og ingefær">
+                    <img src="images/cocktail.png" alt="Billede af øl i glas ved siden af lækker tapas">
+                </div>
+
+                <div class="container_text">
+                    <h2>Nydes hvordan du ønsker</h2>
+                    
+                    <p>Vores øl er brygget, så den kan tilpasse sig din unikke stil og præference. Uanset om du foretrækker den på farten, som basen i en mocktail eller som det fuldende element til tapas, giver vores bryg dig friheden til at nyde på din måde.</p>
+            
+                    <a href="side-u-u.html"><button>LÆS MERE</button></a>
+                </div>
+            </section>
+            <!-- Slut på sektion -->
+
+            <!-- Start på html for sektion "nydes hvor du vil" -->  
+            <section class="container" id="no_border_bottom">
+                <img src="images/solnedgang.png" alt="Billede af to i sportstøj, som drikker øl, mens solen går ned">
+            
+                <div class="container_text">
+                    <h2>Nydes hvor du ønsker</h2>
+                    
+                    <p>Uanset om det er til en afslappende dag derhjemme, efter mandagens fodboldtræning, på stadionet torsdag aften eller til weekendens sammenkomster, er vores forfriskning skabt til at nyde, præcis hvor du ønsker det.</p>
+                </div>
+            </section>
+            <!-- Slut på sektion -->
+
+            <!-- Start på sektion med nyhedsbrev -->
+            <section class="engage">
+                <h2>Nyheder og tilbud<br>- direkte i din indbakke</h2>
+
+                <p>Hold dig opdateret på nye bryg, fede begivenheder og fristende tilbud og få samtidig løbende inspiration til servering!</p>
+
+                <form>
+                    <label for="email">DIN MAIL</label>
+                    <input type="email" id="email" name="email">
+                    <button><i class="fa fa-angle-right" aria-hidden="true" id="submit-button"></i></button>
+                </form>
+            </section>
+            <!-- Slut på sektion med nyhedsbrev -->
+        </main>
+        <!-- Slut på main -->
+
+        <!-- Start på footer -->
+        <footer>
+            <h3><a href="index.html" id="no_line">TRØJBORGBRYG</a></h3>
+            <div class="footer_container">
+                <p>Otte Ruds Gade 23B, Trøjborg<br>8200 Aarhus N, Danmark</p>
+                <p>+45 29116700<br>kontakt@trojborgbryg.dk</p>
+                <div class="align">
+                    <div class="mærkater">
+                        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    </div>
+                    <div class="mærkater">
+                        <img src="images/eu-maerke.jpg" alt="EU's mærke for økologi">
+                        <img src="images/svanemaerket.png" alt="Svanemærket">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Slut på footer -->
+    </body>
+    <!-- Slut på body med alt synligt indhold på siden -->
+</html>
